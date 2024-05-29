@@ -10,7 +10,7 @@
   <name>algo</name>
   <modules>
     <module>c1-introduce</module>
-      <module>c2-array</module>
+    <module>c2-datastruct</module>
   </modules>
 
   <properties>
