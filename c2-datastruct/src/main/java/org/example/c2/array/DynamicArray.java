@@ -1,4 +1,4 @@
-package org.example.c2;
+package org.example.c2.array;
 
 import java.util.Arrays;
 import java.util.Iterator;

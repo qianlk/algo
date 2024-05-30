@@ -1078,8 +1078,6 @@ public class SinglyLinkedList implements Iterable<Integer> {
   * 指向下一个节点
 * NodeIterator 要定义为**非 static 内部类**，是因为它与 SinglyLinkedList 实例相关，是对某个 SinglyLinkedList 实例的迭代
 
-
-
 **递归遍历**
 
 ```java
@@ -1248,7 +1246,7 @@ public class SinglyLinkedList {
 * 最后一个 if 块对应着至少得两个节点的情况
   * 不仅仅判断上一个节点非空，还要保证当前节点非空
 
-
+https://www.bilibili.com/video/BV1Lv4y1e7HL?p=37
 
 ### 单向链表（带哨兵）
 
@@ -1489,13 +1487,13 @@ public class DoublyLinkedListSentinel implements Iterable<Integer> {
 
 双向环形链表带哨兵，这时哨兵**既作为头，也作为尾**
 
-![image-20221229144232651](./imgs/image-20221229144232651.png)
+![image-20221229144232651](./assets/README/image-20221229144232651.png)
 
-![image-20221229143756065](./imgs/image-20221229143756065.png)
+![image-20221229143756065](./assets/README/image-20221229143756065.png)
 
-![image-20221229153338425](./imgs/image-20221229153338425.png)
+![image-20221229153338425](./assets/README/image-20221229153338425.png)
 
-![image-20221229154248800](./imgs/image-20221229154248800.png)
+![image-20221229154248800](./assets/README/image-20221229154248800.png)
 
 参考实现
 
@@ -1841,7 +1839,7 @@ public static int f(int n) {
 
 **执行流程**
 
-![](./imgs/2.gif)
+![](./assets/README/2.gif)
 
 * 绿色代表正在执行（对应递），灰色代表执行结束（对应归）
 * 递不到头，不能归，对应着深度优先搜索
@@ -1863,7 +1861,7 @@ public static int f(int n) {
 
 **变体1 - 兔子问题[^8]**
 
-![image-20221110155655827](./imgs/image-20221110155655827.png)
+![image-20221110155655827](./assets/README/image-20221110155655827.png)
 
 * 第一个月，有一对未成熟的兔子（黑色，注意图中个头较小）
 * 第二个月，它们成熟
@@ -1910,7 +1908,7 @@ public static int f(int n) {
 
 上述代码存在很多重复的计算，例如求 $f(5)$ 递归分解过程
 
-![image-20221207092417933](./imgs/image-20221207092417933.png)
+![image-20221207092417933](./assets/README/image-20221207092417933.png)
 
 可以看到（颜色相同的是重复的）：
 
@@ -1947,7 +1945,7 @@ public static int f(int[] cache, int n) {
 
 优化后的图示，只要结果被缓存，就**不会执行其子问题**
 
-![image-20221213173225807](./imgs/image-20221213173225807.png)
+![image-20221213173225807](./assets/README/image-20221213173225807.png)
 
 * 改进后的时间复杂度为 $O(n)$
 * 请自行验证改进后的效果
@@ -2114,7 +2112,7 @@ c()
 
 安装 Scala
 
-![image-20221111122709227](./imgs/image-20221111122709227.png)
+![image-20221111122709227](./assets/README/image-20221111122709227.png)
 
 Scala 入门
 
@@ -2576,11 +2574,11 @@ public interface Queue<E> {
 
 下面以**单向环形带哨兵**链表方式来实现队列
 
-![image-20221230150105089](./imgs/image-20221230150105089.png)
+![image-20221230150105089](./assets/README/image-20221230150105089.png)
 
-![image-20221230150141318](./imgs/image-20221230150141318.png)
+![image-20221230150141318](./assets/README/image-20221230150141318.png)
 
-![image-20221230150153271](./imgs/image-20221230150153271.png)
+![image-20221230150153271](./assets/README/image-20221230150153271.png)
 
 代码
 
@@ -2688,13 +2686,13 @@ public class LinkedListQueue<E>
 3. 数组性能更佳
 4. 环形数组比较适合实现有界队列、RingBuffer 等
 
-![image-20221228175413998](./imgs/image-20221228175413998.png)
+![image-20221228175413998](./assets/README/image-20221228175413998.png)
 
 **下标计算**
 
 例如，数组长度是 5，当前位置是 3 ，向前走 2 步，此时下标为 $(3 + 2)\%5 = 0$
 
-![image-20221228180357257](./imgs/image-20221228180357257.png)
+![image-20221228180357257](./assets/README/image-20221228180357257.png)
 
 $$
 (cur + step) \% length
@@ -2712,11 +2710,11 @@ $$
 
 **判断空**
 
-![image-20221231081009018](./imgs/image-20221231081009018.png)
+![image-20221231081009018](./assets/README/image-20221231081009018.png)
 
 **判断满**
 
-![image-20221231080909475](./imgs/image-20221231080909475.png)
+![image-20221231080909475](./assets/README/image-20221231080909475.png)
 
 满之后的策略可以根据业务需求决定
 
@@ -3590,11 +3588,11 @@ public class ArrayDeque1<E> implements Deque<E>, Iterable<E> {
 
 数组实现中，如果存储的是基本类型，那么无需考虑内存释放，例如
 
-![image-20230110084245095](./imgs/image-20230110084245095.png)
+![image-20230110084245095](./assets/README/image-20230110084245095.png)
 
 但如果存储的是引用类型，应当设置该位置的引用为 null，以便内存及时释放
 
-![image-20230110084632543](./imgs/image-20230110084632543.png)
+![image-20230110084632543](./assets/README/image-20230110084632543.png)
 
 
 
@@ -3766,25 +3764,25 @@ public class PriorityQueue2<E extends Priority> implements Queue<E> {
 
 例1 - 满二叉树（Full Binary Tree）特点：每一层都是填满的
 
-![image-20230112171444699](./imgs/image-20230112171444699.png)
+![image-20230112171444699](./assets/README/image-20230112171444699.png)
 
 例2 - 完全二叉树（Complete Binary Tree）特点：最后一层可能未填满，靠左对齐
 
-![image-20230112171917135](./imgs/image-20230112171917135.png)
+![image-20230112171917135](./assets/README/image-20230112171917135.png)
 
 例3 - 大顶堆
 
-![image-20230112170242265](./imgs/image-20230112170242265.png)
+![image-20230112170242265](./assets/README/image-20230112170242265.png)
 
 例4 - 小顶堆
 
-![image-20230112171236067](./imgs/image-20230112171236067.png)
+![image-20230112171236067](./assets/README/image-20230112171236067.png)
 
 
 
 完全二叉树可以使用数组来表示
 
-![image-20230112174351649](./imgs/image-20230112174351649.png)
+![image-20230112174351649](./assets/README/image-20230112174351649.png)
 
 
 
@@ -4310,15 +4308,15 @@ java.lang.IllegalMonitorStateException
 
 那有同学说，加上锁不就行了吗，于是写出了下面的代码
 
-![image-20230208160343493](imgs/image-20230208160343493.png)
+![image-20230208160343493](assets/README/image-20230208160343493.png)
 
 发现什么问题了？两把锁这么嵌套使用，非常容易出现死锁，如下所示
 
-![image-20230208160143386](imgs/image-20230208160143386.png)
+![image-20230208160143386](assets/README/image-20230208160143386.png)
 
 因此得避免嵌套，两段加锁的代码变成了下面平级的样子
 
-![image-20230208162857435](imgs/image-20230208162857435.png)
+![image-20230208162857435](assets/README/image-20230208162857435.png)
 
 性能还可以进一步提升
 
@@ -4570,7 +4568,7 @@ public class MaxHeap {
 
 Floyd 建堆算法作者（也是之前龟兔赛跑判环作者）：
 
-![image-20230213095110902](imgs/image-20230213095110902.png)
+![image-20230213095110902](assets/README/image-20230213095110902.png)
 
 1. 找到最后一个非叶子节点
 2. 从后向前，对每个节点执行下潜
@@ -4584,7 +4582,7 @@ Floyd 建堆算法作者（也是之前龟兔赛跑判环作者）：
 
 算法时间复杂度分析
 
-![image-20230213114024607](imgs/image-20230213114024607.png)
+![image-20230213114024607](assets/README/image-20230213114024607.png)
 
 下面看交换次数的推导：设节点高度为 3
 
@@ -4660,7 +4658,7 @@ $$
 
 #### 广度优先
 
-![image-20230216153607396](imgs/image-20230216153607396.png)
+![image-20230216153607396](assets/README/image-20230216153607396.png)
 
 | 本轮开始时队列 | 本轮访问节点 |
 | -------------- | ------------ |
@@ -4688,7 +4686,7 @@ $$
 
 #### 深度优先
 
-![image-20230221110443230](./imgs/image-20230221110443230.png)
+![image-20230221110443230](./assets/README/image-20230221110443230.png)
 
 | 栈暂存    | 已处理                                     | 前序遍历 | 中序遍历 |
 | --------- | ------------------------------------------ | -------- | -------- |
@@ -4866,7 +4864,7 @@ public static void colorPrintln(String origin, int color) {
 
 一张图演示三种遍历
 
-![Sorted_binary_tree_ALL_RGB.svg](./imgs/Sorted_binary_tree_ALL_RGB.svg.png)
+![Sorted_binary_tree_ALL_RGB.svg](./assets/README/Sorted_binary_tree_ALL_RGB.svg.png)
 
 * 红色：前序遍历顺序
 * 绿色：中序遍历顺序
@@ -5328,7 +5326,7 @@ Tower of Hanoi，是一个源于印度古老传说：大梵天创建世界时做
 
 下面的动图演示了4片圆盘的移动方法
 
-![](./imgs/Tower_of_Hanoi_4.gif)
+![](./assets/README/Tower_of_Hanoi_4.gif)
 
 使用程序代码模拟圆盘的移动过程，并估算出时间复杂度
 
@@ -5342,7 +5340,7 @@ Tower of Hanoi，是一个源于印度古老传说：大梵天创建世界时做
 
   * 移动圆盘1 $a \mapsto c$  
 
-  <img src="./imgs/image-20221219090741078.png" alt="image-20221219090741078" style="zoom:50%;" />
+  <img src="./assets/README/image-20221219090741078.png" alt="image-20221219090741078" style="zoom:50%;" />
 
 * 如果有两个圆盘，那么
 
@@ -5350,7 +5348,7 @@ Tower of Hanoi，是一个源于印度古老传说：大梵天创建世界时做
   * 圆盘2 $a \mapsto c$
   * 圆盘1 $b \mapsto c$
 
-  <img src="./imgs/image-20221219091316225.png" alt="image-20221219091316225" style="zoom:50%;" />
+  <img src="./assets/README/image-20221219091316225.png" alt="image-20221219091316225" style="zoom:50%;" />
 
 * 如果有三个圆盘，那么
 
@@ -5358,14 +5356,14 @@ Tower of Hanoi，是一个源于印度古老传说：大梵天创建世界时做
   * 圆盘3 $a \mapsto c$
   * 圆盘12 $b \mapsto c$
 
-  <img src="./imgs/image-20221219091930614.png" alt="image-20221219091930614" style="zoom:50%;" />
+  <img src="./assets/README/image-20221219091930614.png" alt="image-20221219091930614" style="zoom:50%;" />
 
 * 如果有四个圆盘，那么
   * 圆盘 123 $a \mapsto b$
   * 圆盘4 $a \mapsto c$
   * 圆盘 123 $b \mapsto c$
 
-<img src="./imgs/image-20221219092537323.png" alt="image-20221219092537323" style="zoom:50%;" />
+<img src="./assets/README/image-20221219092537323.png" alt="image-20221219092537323" style="zoom:50%;" />
 
 
 
@@ -5422,7 +5420,7 @@ public class E02HanoiTower {
 
 ### E03. 杨辉三角[^6]
 
-![image-20221219172514410](./imgs/image-20221219172514410.png)
+![image-20221219172514410](./assets/README/image-20221219172514410.png)
 
 **分析**
 
@@ -6629,7 +6627,7 @@ public boolean isPalindrome(ListNode h1) {
 
 > 除了 Floyd 判环算法外，还有其它的判环算法，详见 https://en.wikipedia.org/wiki/Cycle_detection
 
-<img src="./imgs/image-20221229190646563.png" alt="image-20221229190646563" style="zoom: 50%;" />
+<img src="./assets/README/image-20221229190646563.png" alt="image-20221229190646563" style="zoom: 50%;" />
 
 如果链表上存在环，那么在环上以不同速度前进的两个指针必定会在某个时刻相遇。算法分为两个阶段
 
@@ -6764,11 +6762,11 @@ public class Ex1Leetcode237 {
 
 例如，下图的两个链表 [1, 2, 4, 5] 与 [3, 4, 5] 它们中 [4, 5] 是相同的，此时应返回节点 4
 
-![image-20221228081715799](./imgs/image-20221228081715799.png)
+![image-20221228081715799](./assets/README/image-20221228081715799.png)
 
 非共尾的情况，如下图所示，此时返回 null
 
-![image-20221228082002730](./imgs/image-20221228082002730.png)
+![image-20221228082002730](./assets/README/image-20221228082002730.png)
 
 思路，称两个链表为 a=[1, 2, 4, 5]，b=[3, 4, 5]，图中用 N 代表 null
 

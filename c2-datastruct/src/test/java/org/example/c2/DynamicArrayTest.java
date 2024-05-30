@@ -1,5 +1,6 @@
 package org.example.c2;
 
+import org.example.c2.array.DynamicArray;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
