@@ -1254,6 +1254,8 @@ https://www.bilibili.com/video/BV1Lv4y1e7HL?p=37
 
 用一个不参与数据存储的特殊 Node 作为哨兵，它一般被称为哨兵或哑元，拥有哨兵节点的链表称为带头链表
 
+![image-20240531212507136](./assets/README/image-20240531212507136.png)
+
 ```java
 public class SinglyLinkedListSentinel {
     // ...
@@ -1369,6 +1371,14 @@ public class SinglyLinkedListSentinel {
 
 
 ### 双向链表（带哨兵）
+
+
+
+![image-20240531215445844](./assets/README/image-20240531215445844.png)
+
+插入元素
+
+![image-20240531215809945](./assets/README/image-20240531215809945.png)
 
 ```java
 public class DoublyLinkedListSentinel implements Iterable<Integer> {
