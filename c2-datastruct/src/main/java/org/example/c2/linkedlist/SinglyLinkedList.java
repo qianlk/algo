@@ -34,7 +34,23 @@ public class SinglyLinkedList implements Iterable<Integer> {
         };
     }
 
-    // todo: 递归遍历
+    /**
+     * 递归遍历
+     */
+    public void loop3(Consumer<Integer> before, Consumer<Integer> after) {
+        recursion(head, before, after);
+    }
+
+    private void recursion(Node curr, Consumer<Integer> before, Consumer<Integer> after) {
+        if (curr == null) {
+            return;
+        }
+//        System.out.println("before:" + curr.value);
+        before.accept(curr.value);
+        recursion(curr.next, before, after);
+        after.accept(curr.value);
+//        System.out.println("after:" + curr.value);
+    }
 
     /**
      * 节点
