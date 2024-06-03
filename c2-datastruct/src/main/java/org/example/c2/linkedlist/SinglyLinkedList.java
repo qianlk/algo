@@ -128,6 +128,30 @@ public class SinglyLinkedList implements Iterable<Integer> {
     }
 
     /**
+     * 尾插法,添加多个
+     */
+    public void addLast(int first, int... rest) {
+        // 组合 subList
+        Node subList = new Node(first, null);
+        Node curr = subList;
+        for (int r : rest) {
+            curr.next = new Node(r, null);
+            curr = curr.next;
+        }
+
+        // 链接 subList
+        Node last = findLast();
+        if (last == null) {
+            head = subList;
+            return;
+        }
+        last.next = subList;
+
+
+    }
+
+
+    /**
      * 查找指定索引的节点
      */
     private Node findNode(int index) {

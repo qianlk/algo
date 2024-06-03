@@ -117,12 +117,20 @@ class SinglyLinkedListTest {
 
     @Test
     @DisplayName("测试递归遍历")
-    public void test() {
+    public void test8() {
         SinglyLinkedList list = getLinkedList();
         list.loop3(value -> {
             System.out.println("before:" + value);
         }, value -> {
             System.out.println("after:" + value);
         });
+    }
+
+    @Test
+    @DisplayName("测试尾部添加多个")
+    void test7() {
+        SinglyLinkedList list = getLinkedList();
+        list.addLast(9, 10, 11);
+        assertIterableEquals(List.of(1, 2, 3, 4, 9, 10, 11), list);
     }
 }

@@ -25,8 +25,9 @@ public class DynamicArray implements Iterable<Integer> {
      * 初始数组
      * 懒惰初始化
      */
-//    private int[] array = new int[capacity];
     private int[] array = {};
+//    private int[] array = new int[capacity];
+
 
     /**
      * 向最后一位添加元素
