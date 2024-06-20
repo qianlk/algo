@@ -11,7 +11,8 @@
   <modules>
     <module>c1-introduce</module>
     <module>c2-datastruct</module>
-      <module>c3-leetcode</module>
+    <module>c3-algorithm</module>
+    <module>c4-leetcode</module>
   </modules>
 
   <properties>

@@ -1,4 +1,4 @@
-package org.example.c3.binarysearch;
+package org.example.c4.binarysearch;
 
 /**
  * @author qlk

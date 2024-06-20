@@ -1,6 +1,7 @@
 package org.example.c1;
 
 /**
+ * 二分查找
  * @author qlk
  */
 public class BinarySearch {
